@@ -1,0 +1,13 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{font-family:Inter,sans-serif;background:#F8F4ED;color:#252525}
+h1,h2,h3,.serif{font-family:'Playfair Display',serif}
+@layer components{
+.btn{@apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition disabled:opacity-40 disabled:cursor-not-allowed}
+.btn-gold{@apply btn bg-gold text-white hover:bg-[#b3935a]}
+.btn-out{@apply btn border border-gold text-charcoal hover:bg-gold/10}
+.btn-dark{@apply btn bg-charcoal text-white hover:bg-black}
+.input{@apply w-full rounded-lg border border-beige bg-white px-3 py-2 text-sm outline-none focus:border-gold}
+.card{@apply rounded-2xl border border-beige bg-white p-5 shadow-sm}
+.th{@apply px-3 py-2 text-left text-xs font-semibold uppercase tracking-wide text-charcoal/60}
+.td{@apply px-3 py-2 text-sm}}
+@media print{body *{visibility:hidden}#invoice,#invoice *{visibility:visible}#invoice{position:absolute;left:0;top:0;width:100%}}
